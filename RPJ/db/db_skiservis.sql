@@ -1,14 +1,13 @@
-DROP DATABASE db_skiservis
-
 CREATE DATABASE db_skiservis
 GO
 
 USE db_skiservis
 GO
 
-
 CREATE SCHEMA ski 
 GO
+
+DROP SCHEMA ski
 
 CREATE TABLE ski.customer
 ( id_customer		INT				IDENTITY(1,1)
@@ -71,6 +70,6 @@ DROP TABLE ski.rentals
 DROP TABLE ski.buy
 DROP TABLE ski.categories
 
-DROP SCHEMA ski
+DROP DATABASE db_skiservis
 
 INSERT INTO ski.customer (mail, [password], first_name, last_name, phone_number) VALUES ('customer@gmail.com', 'Hajdfns', 'John', 'Doe', '421905574321')
