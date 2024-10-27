@@ -6,6 +6,7 @@ GO
 USE db_skiservis
 GO
 
+
 CREATE SCHEMA ski 
 GO
 
@@ -65,10 +66,11 @@ CREATE TABLE ski.reservations
 GO
 
 DROP TABLE ski.reservations
-DROP TABLE ski.customer
 DROP TABLE ski.services
 DROP TABLE ski.rentals
 DROP TABLE ski.buy
 DROP TABLE ski.categories
 
 DROP SCHEMA ski
+
+INSERT INTO ski.customer (mail, [password], first_name, last_name, phone_number) VALUES ('customer@gmail.com', 'Hajdfns', 'John', 'Doe', '421905574321')
