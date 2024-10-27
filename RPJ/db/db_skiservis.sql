@@ -63,3 +63,10 @@ CREATE TABLE ski.reservations
 , CONSTRAINT service_f1 FOREIGN KEY(id_service) REFERENCES ski.services(id_service)
 )
 GO
+
+DROP TABLE ski.reservations
+DROP TABLE ski.customer
+DROP TABLE ski.services
+DROP TABLE ski.rentals
+DROP TABLE ski.buy
+DROP TABLE ski.categories
