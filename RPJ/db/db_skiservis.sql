@@ -9,7 +9,7 @@ GO
 
 DROP SCHEMA ski
 
-CREATE TABLE komp.customer
+CREATE TABLE ski.customer
 ( id_customer		INT				IDENTITY(1,1)
 , mail       		VARCHAR(40)     NOT NULL
 , [password]		VARCHAR(30)     NOT NULL
