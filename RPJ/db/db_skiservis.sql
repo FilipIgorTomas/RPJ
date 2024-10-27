@@ -1,3 +1,5 @@
+DROP DATABASE db_skiservis
+
 CREATE DATABASE db_skiservis
 GO
 
@@ -6,8 +8,6 @@ GO
 
 CREATE SCHEMA ski 
 GO
-
-DROP SCHEMA ski
 
 CREATE TABLE ski.customer
 ( id_customer		INT				IDENTITY(1,1)
@@ -71,5 +71,4 @@ DROP TABLE ski.rentals
 DROP TABLE ski.buy
 DROP TABLE ski.categories
 
-DROP DATABASE db_skiservis
 DROP SCHEMA ski
