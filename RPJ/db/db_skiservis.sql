@@ -72,3 +72,4 @@ DROP TABLE ski.buy
 DROP TABLE ski.categories
 
 DROP DATABASE db_skiservis
+DROP SCHEMA ski
