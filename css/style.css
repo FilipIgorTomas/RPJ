@@ -6,11 +6,29 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
 }
 
@@ -18,12 +36,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 10%;
+    padding: 2% 10%;
     background-color: #1b2248;
 }
 
 .logo {
-    cursor: pointer;
     width: 180px;
 }
 
@@ -55,4 +72,65 @@ button {
 
 button:hover {
     background-color: rgba(67, 181, 238, 0.8);
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #43b5ee;
+    margin: 4% 0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.container p {
+    font-weight: 700;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.container form {
+    margin-top: 30px;
+}
+
+form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+form .input-box input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+footer {
+    margin-top: auto;
+    background: #1b2248;
+    color: #c7c7c7;
+    text-align: center;
+    padding: 4%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
