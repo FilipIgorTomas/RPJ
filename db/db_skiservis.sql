@@ -9,14 +9,11 @@ GO
 
 DROP SCHEMA ski
 
-CREATE TABLE ski.customer
-( id_customer		INT				IDENTITY(1,1)
+CREATE TABLE ski.admin
+( id_admin		INT				IDENTITY(1,1)
 , mail       		VARCHAR(40)     NOT NULL
 , [password]		VARCHAR(30)     NOT NULL
-, first_name        VARCHAR(255)    NOT NULL
-, last_name         VARCHAR(255)    NOT NULL
-, phone_number      CHAR(12)        NOT NULL
-, CONSTRAINT customer_pk PRIMARY KEY(id_customer)
+, CONSTRAINT admin_pk PRIMARY KEY(id_admin)
 )
 GO
 
@@ -56,10 +53,10 @@ GO
 
 CREATE TABLE ski.reservations
 ( id_reservation     INT            IDENTITY(1,1)
-, id_customer        INT            NOT NULL
+, id_admin        INT            NOT NULL
 , id_service         INT            NOT NULL
 , CONSTRAINT reservation_pk PRIMARY KEY(id_reservation)
-, CONSTRAINT customer_f1 FOREIGN KEY(id_customer) REFERENCES ski.customer(id_customer)
+, CONSTRAINT admin_f1 FOREIGN KEY(id_admin) REFERENCES ski.admin(id_admin)
 , CONSTRAINT service_f1 FOREIGN KEY(id_service) REFERENCES ski.services(id_service)
 )
 GO
@@ -72,4 +69,4 @@ DROP TABLE ski.categories
 
 DROP DATABASE db_skiservis
 
-INSERT INTO ski.customer (mail, [password], first_name, last_name, phone_number) VALUES ('customer@gmail.com', 'Hajdfns', 'John', 'Doe', '421905574321')
+INSERT INTO ski.admin (mail, [password]) VALUES ('admin@gmail.com', 'Hajdfns')
