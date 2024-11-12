@@ -26,35 +26,91 @@
         <div class="content">
             <div class="container">
                 <p>Vyberte si službu</p>
-                <form action="process-order.php" method="post">
+                <form>
 
                     <div class="input-box">
-                        <label for="meno">Meno</label>
-                        <input type="text" placeholder="Zadajte meno" id="meno">
+                        <label>Meno</label>
+                        <input type="text" placeholder="Zadajte meno" id="Meno">
                     </div>
 
                     <div class="input-box">
-                        <label for="priezvisko">Priezvisko</label>
-                        <input type="text" placeholder="Zadajte priezvisko" id="priezvisko">
+                        <label>Priezvisko</label>
+                        <input type="text" placeholder="Zadajte priezvisko" id="Priezvisko">
                     </div>
 
                     <div class="input-box">
-                        <label for="test">TEST</label>
-                        <input type="text" placeholder="TEST" id="test">
+                        <label>TEST</label>
+                        <input type="text" placeholder="TEST" id="Test1">
                     </div>
 
                     <div class="input-box">
-                        <label for="test2">TEST</label>
-                        <input type="text" placeholder="TEST" id="test2">
+                        <label>TEST</label>
+                        <input type="text" placeholder="TEST" id="Test2">
                     </div>
 
-                    <br>
 
-                    <button>Odoslať</button>
+                    <button id="submit">Odoslať</button>
 
                 </form>
             </div>
         </div>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyAgHqVHAhVEsmhdSGDhc8D0LMrUm9iXG5A",
+              authDomain: "skiservis-dc8cf.firebaseapp.com",
+              databaseURL: "https://skiservis-dc8cf-default-rtdb.europe-west1.firebasedatabase.app",
+              projectId: "skiservis-dc8cf",
+              storageBucket: "skiservis-dc8cf.firebasestorage.app",
+              messagingSenderId: "836391098779",
+              appId: "1:836391098779:web:119e7502f8db1691bde93e"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+            import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"
+
+            const db = getDatabase();
+
+            var Meno = document.querySelector("#Meno");
+            var Priezvisko = document.querySelector("#Priezvisko");
+            var Test1 = document.querySelector("#Test1");
+            var Test2 = document.querySelector("#Test2");
+            var findMeno = document.querySelector("#findMeno");
+            var findPriezvisko = document.querySelector("#findPriezvisko");
+            var findTest1 = document.querySelector("#findTest1");
+            var findTest2 = document.querySelector("#findTest2");
+
+            var submitBtn = document.querySelector("#submit");
+            
+            function InsertData(){
+                set(ref(db, "People/" + Meno.value),  {
+                    Name: Meno.value,
+                    Surname: Priezvisko.value,
+                    Test1: Test1.value,
+                    Test2: Test2.value
+                })
+                .then(()=>{
+                    alert("Data inserted successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+
+            submitBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            InsertData();
+            });
+
+            </script>
     </main>
     <footer>
         <div class="content">
