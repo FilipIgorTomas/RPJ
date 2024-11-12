@@ -1,136 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 10%;
+nav {
     background-color: #1b2248;
 }
 
-.logo {
-    width: 180px;
-}
-
-.nav_links {
-    list-style: none;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover {
-    color: #43b5ee;
-}
-
-button {
-    padding: 9px 25px;
-    background-color: rgba(67, 181, 238, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: rgba(67, 181, 238, 0.8);
-}
-
-.container {
-    position: relative;
-    max-width: 700px;
-    width: 100%;
-    background: #43b5ee;
-    margin: 4% 0;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-.container p {
-    font-weight: 700;
-    font-size: 2rem;
-    color: whitesmoke;
-    text-align: center;
-}
-
-.container form {
-    margin-top: 30px;
-}
-
-form .input-box {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.input-box label {
-    color: whitesmoke;
-    font-weight: 600;
-}
-
-form .input-box input {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707070;
-    margin-top: 8px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
-}
-
-
-
-
-
-
-footer {
-    margin-top: auto;
-    background: #1b2248;
-    color: #c7c7c7;
-    text-align: center;
-    padding: 4%;
+header {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
+}
+
+header button {
+    background-color: rgba(67, 181, 238, 1);
+    font-weight: 600;
+}
+
+header button:hover {
+    background-color: rgba(67, 181, 238, 0.8);
 }
