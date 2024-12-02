@@ -18,3 +18,9 @@ header button {
 header button:hover {
     background-color: rgba(67, 181, 238, 0.8);
 }
+
+@media (max-width: 1200px) {
+    .nav-text {
+        font-size: 20px;
+    }
+}
