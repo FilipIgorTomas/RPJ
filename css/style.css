@@ -8,6 +8,19 @@ nav {
     background-color: #1b2248;
 }
 
+.maintext1 {
+    padding: 5% 0;
+    color: white;
+    background-color: #273169;
+
+}
+
+.maintext2 {
+    padding: 5% 0;
+    color: white;
+    background-color: #1b2248;
+}
+
 header {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
