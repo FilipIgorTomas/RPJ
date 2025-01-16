@@ -8,6 +8,10 @@ nav {
     background-color: #1b2248;
 }
 
+.nav-link {
+    color: #f0f0f0;
+}
+
 main {
     color: white;
 }
@@ -58,4 +62,54 @@ header {
 .c-img {
     height: 100%;
     object-fit: cover;
+}
+
+
+.custom-caption {
+    top: 55%; 
+    left: 15%; 
+    transform: translateY(-50%); 
+    text-align: left; 
+    z-index: 2;
+}
+
+.custom-caption h1 {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 8px 8px 20px rgba(0, 0, 0, 1); 
+}
+
+.custom-caption p {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    text-shadow: 8px 8px 20px rgba(0, 0, 0, 1); 
+    margin-top: 10px;
+}
+
+.carousel-caption {
+    position: absolute;
+    width: auto; 
+    max-width: 50%; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+}
+
+form {
+    background-color: #273169;
+}
+
+.accordion-button {
+    background-color: #273169; 
+    color: white;
+    padding: 1.5rem;
+    font-size: large;
 }

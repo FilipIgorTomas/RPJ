@@ -32,16 +32,118 @@
     </header>
 
     <main>
-        <div class="container d-flex justify-content-center align-items-center pt-5 pb-5">
-          <div class="col">
-            <div class="row pb-2"><h1>Kde nas najdete:</h1></div>
-            <div class="row"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d263.5260026120424!2d21.236856298549547!3d49.011504648846795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ef2a3bcc4dd01%3A0x26798b95f0b0a1ab!2zU2tpc2VydmlzIFByZcWhb3YgLSBwb8W-acSNb3bFiGEgbHnFvsOtIGEgbHnFvmlhcnNrZWhvIHbDvXN0cm9qYSwgcHJlZGFqLCBzZXJ2aXMgbHnFvsOt!5e1!3m2!1ssk!2ssk!4v1735665971382!5m2!1ssk!2ssk" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            <div class="row pt-5">
-              <h1>Telefonny kontakt:</h1>
-              <h1>Najdete nas aj na facebooku:</h1>
+      <div class="maintext1">
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="fw-bold">Kontakt</h1>
+            <h4>V prípade otázok nás neváhajte kontaktovať</h4>
+
+          </div>
+        </div>
+
+    </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-6 mb-4">
+              <h1>Kde nás nájdete</h1>
+              <p></p>
+              <p><strong>Adresa:</strong> Sabinovská 5141/92, 080 01 Prešov</p>
+              <p><strong>Telefón:</strong> <a href="tel:+1234567890">+421 123 456 789</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@skiservis.com">info@skiservis.com</a></p>
+              <p><strong>Otváracie hodiny:</strong><br>
+                Pon - Pia: 17:00 - 19:30 <br>
+                Sob: 10:00 - 12:00 <br>
+                Ned: Zatvorené
+              </p>
+              <div class="mt-3">
+                <h2>Sledujte nás</h2>
+                <a href="#" class="btn btn-primary me-2">Facebook</a>
+                <a href="#" class="btn btn-info">Instagram</a>
+              </div>
+            </div>
+      
+            <!-- Map -->
+            <div class="col-md-6 mb-4">
+              <h2>Naša poloha</h2>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d263.5260026120424!2d21.236856298549547!3d49.011504648846795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ef2a3bcc4dd01%3A0x26798b95f0b0a1ab!2zU2tpc2VydmlzIFByZcWhb3YgLSBwb8W-acSNb3bFiGEgbHnFvsOtIGEgbHnFvmlhcnNrZWhvIHbDvXN0cm9qYSwgcHJlZGFqLCBzZXJ2aXMgbHnFvsOt!5e1!3m2!1ssk!2ssk!4v1735665971382!5m2!1ssk!2ssk" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row">
+            <!-- Contact Form -->
+          <div class="col-12">
+            <h2>Napíšte nám</h2>
+            <form class="p-4 rounded">
+              <div class="mb-3">
+                <label for="name" class="form-label">Meno a priezvisko</label>
+                <input type="text" class="form-control shadow-sm" id="name" placeholder="Janko Hraško" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control shadow-sm" id="email" placeholder="jankohrasko12@gmail.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefón</label>
+                <input type="tel" class="form-control shadow-sm" id="phone" placeholder="+421 234 567 890 (voliteľné)">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Správa</label>
+                <textarea class="form-control shadow-sm" id="message" rows="5" placeholder="Sem napíšte vašu správu" required></textarea>
+              </div>
+              <button type="submit" class="custom-btn w-100 shadow-sm mt-4">Odoslať</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="container mb-5">
+        <h2>Často kladené otázky</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Aké služby ponúkate?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Ponúkame tuning, opravy a požičovne lyží a snowboardov. Kontaktujte nás pre konkrétne služby.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Musím si rezervovať termín?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Aj keď sú návštevy vítané, odporúčame vám rezervovať si stretnutie počas hlavnej sezóny, aby ste zabezpečili rýchle služby.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Aké sú vaše cenové údaje?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Cena sa líši v závislosti od služby. Pre podrobný cenník nás prosím kontaktujte alebo navštívte našu predajňu.
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
     </main>
 
     <footer class="bg-dark text-white p-5">
