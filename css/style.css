@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #1b2248;
 }
@@ -19,7 +24,6 @@ main {
 .maintext1 {
     padding: 5% 0;
     background-color: #273169;
-
 }
 
 .maintext2 {
@@ -112,4 +116,36 @@ form {
     color: white;
     padding: 1.5rem;
     font-size: large;
+}
+
+.card {
+    color:white;
+}
+
+.legend-step-1 {
+    background-color: #4CAF50; 
+}
+
+.legend-step-2 {
+    background-color: #2196F3;
+}
+
+.legend-step-3 {
+    background-color: #f44336;
+}
+
+.legend-step-4 {
+    background-color: #FF9800;
+}
+
+.legend-step-5 {
+    background-color: #9C27B0; 
+}
+
+.legend-step-6 {
+    background-color: #adb935;
+}
+
+.card-offer {
+    background-color: #273169;
 }
