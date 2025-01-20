@@ -112,7 +112,7 @@ form {
 }
 
 .accordion-button {
-    background-color: #273169; 
+    background-color: #3e4b96; 
     color: white;
     padding: 1.5rem;
     font-size: large;
@@ -148,4 +148,18 @@ form {
 
 .card-offer {
     background-color: #273169;
+}
+
+.legend-card {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.legend-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
 }
