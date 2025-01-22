@@ -166,6 +166,8 @@ form {
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
+    color: white;
+    text-align: center;
 }
 
 .highlight {
