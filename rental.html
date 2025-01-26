@@ -43,42 +43,61 @@
 
       <div id="rental-section" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Naša ponuka</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-rent">
-                        <img src="images/gallerymain1.jpg" class="card-img-top" alt="Skis">
-                        <div class="card-body">
-                            <h5 class="card-title">Lyže</h5>
-                            <p class="card-text">Vyberte si zo širokej ponuky lyží pre začiatočníkov aj pre pokročilých.</p>
-                            <a href="#" class="custom-btn rounded-1">Detaily</a>
-                        </div>
-                    </div>
+          <h2 class="text-center mb-4">Naša ponuka</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card card-rent">
+                <img src="images/gallerymain1.jpg" class="card-img-top" alt="Skis">
+                <div class="card-body">
+                  <h5 class="card-title">Lyže</h5>
+                  <p class="card-text">Vyberte si zo širokej ponuky lyží pre začiatočníkov aj pre pokročilých.</p>
+                  <button class="custom-btn rounded-1" onclick="showDetails('Lyže', 'images/gallerymain1.jpg', 'Vyberte si zo širokej ponuky lyží pre začiatočníkov aj pre pokročilých.')">Detaily</button>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-rent">
-                        <img src="images/gallerymain2.jpg" class="card-img-top" alt="Snowboards">
-                        <div class="card-body">
-                            <h5 class="card-title">Snowboardy</h5>
-                            <p class="card-text">Vysokokvalitné snowboardy pre všetky štýly jazdy s rôznymi zahnutiami.</p>
-                            <a href="#" class="custom-btn rounded-1">Detaily</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-rent">
-                        <img src="images/gallerymain3.jpg" class="card-img-top" alt="Rskis">
-                        <div class="card-body">
-                            <h5 class="card-title">Bežecké lyže</h5>
-                            <p class="card-text">Široký výber najkvalitnejších bežiek pre všetky typy jazdy a terénu. </p>
-                            <a href="#" class="custom-btn rounded-1">Detaily</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="card card-rent">
+                <img src="images/gallerymain2.jpg" class="card-img-top" alt="Snowboards">
+                <div class="card-body">
+                  <h5 class="card-title">Snowboardy</h5>
+                  <p class="card-text">Vysokokvalitné snowboardy pre všetky štýly jazdy s rôznymi zahnutiami.</p>
+                  <button class="custom-btn rounded-1" onclick="showDetails('Snowboardy', 'images/gallerymain2.jpg', 'Vysokokvalitné snowboardy pre všetky štýly jazdy s rôznymi zahnutiami.')">Detaily</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-rent">
+                <img src="images/gallerymain3.jpg" class="card-img-top" alt="Rskis">
+                <div class="card-body">
+                  <h5 class="card-title">Bežecké lyže</h5>
+                  <p class="card-text">Široký výber najkvalitnejších bežiek pre všetky typy jazdy a terénu.</p>
+                  <button class="custom-btn rounded-1" onclick="showDetails('Bežecké lyže', 'images/gallerymain3.jpg', 'Široký výber najkvalitnejších bežiek pre všetky typy jazdy a terénu.')">Detaily</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
+      
+      <!-- detail -->
+      <div id="detailed-card" class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img id="detail-img" src="#rental-section" class="img-fluid rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 id="detail-title" class="card-title"></h5>
+              <p id="detail-text" class="card-text"></p>
+              <p id="detail-update" class="card-text"><small class="text-body-secondary"></small></p>
+              <button class="custom-btn rounded-1" onclick="closeDetails()">Zavrieť</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- exit overlay -->
+      <div id="overlay" onclick="closeDetails()"></div>
 
       <div class="py-5">
         <div class="container">
@@ -260,7 +279,23 @@
 
 
 
-
+    <script>
+      function showDetails(title, imgSrc, text, update) {
+        // content
+        document.getElementById("detail-title").textContent = title;
+        document.getElementById("detail-img").src = imgSrc;
+        document.getElementById("detail-text").textContent = text;    
+        // zobrazit
+        document.getElementById("detailed-card").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+    
+      function closeDetails() {
+        // skryt
+        document.getElementById("detailed-card").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
