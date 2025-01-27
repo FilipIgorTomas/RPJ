@@ -18,7 +18,68 @@ nav {
 }
 
 .nav-link {
-    color: #f0f0f0;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #62cdff;
+}
+
+.navbar-toggler-icon {
+    display: none;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+}
+
+.navbar-toggler span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-toggler.collapsed span:nth-child(1) {
+    transform: rotate(0deg);
+    position: relative;
+    top: 0;
+}
+
+.navbar-toggler.collapsed span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed span:nth-child(3) {
+    transform: rotate(0deg);
+    position: relative;
+    top: 0;
+}
+
+/* X icon (expanded state) */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
 }
 
 main {
@@ -101,6 +162,15 @@ header {
     max-width: 50%; 
 }
 
+@media (max-width: 800px) {
+    .custom-caption h1{
+        font-size: 2.5rem;
+    }
+    .custom-caption p{
+        font-size: 1.5rem;
+    }
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -132,6 +202,10 @@ form {
 
 #detailed-card {
     width: 70%;;
+    max-width: 90vh;
+    max-height: 80vh;
+    margin: auto;
+    padding: 20px;
     display: none; 
     position: fixed; 
     top: 50%; 
@@ -140,7 +214,20 @@ form {
     z-index: 1000; 
     background: #1b2248; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
+
+#detailed-card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#detailed-card .card-body {
+    padding: 20px;
+    line-height: 1.6;
+  }
 
 #overlay {
     display: none; 

@@ -8,6 +8,7 @@
     <title>Požičovňa lyží Prešov - Skiservis Sabinovská</title>    
     <link rel="icon" sizes="192x192" href="images/icon.png" type="image/png">
     <meta name="description" content="Skiservis Prešov - požičovňa, predaj a servis lyží a lyžiarskeho výstroja, sezónne výpožičky setov pre deti aj dospelých, výstroj na lyžiarsky zájazd, krátkodobé výpožičky, servis a údržba lyží, bežecké lyže, snowboard">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,6 +16,8 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <a><img class="logo" src="images/logo.jpg" alt="logo"></a>
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -280,22 +283,96 @@
 
 
     <script>
-      function showDetails(title, imgSrc, text, update) {
-        // content
+      // Define expanded details for each item
+      const detailsData = {
+        "Lyže": {
+          imgSrc: "images/gallerymain1.jpg",
+          text: `
+            <strong>Typy lyží:</strong>
+            <ul>
+              <li>Začiatočnícke lyže - jednoduché ovládanie a stabilita</li>
+              <li>Pokročilé lyže - pre dynamickú jazdu a výkon</li>
+              <li>Freeride lyže - ideálne do prašanu</li>
+            </ul>
+            <strong>Podmienky prenájmu:</strong>
+            <ul>
+              <li>Minimálny vek: 12 rokov</li>
+              <li>Kaucia: 50 € (vratná pri vrátení v dobrom stave)</li>
+            </ul>
+            <strong>Tipy:</strong>
+            <ul>
+              <li>Pri výbere veľkosti lyží si zvoľte dĺžku medzi bradou a hlavou.</li>
+              <li>Nezabudnite si vziať prilbu a okuliare pre bezpečnosť.</li>
+            </ul>
+          `,
+        },
+        "Snowboardy": {
+          imgSrc: "images/gallerymain2.jpg",
+          text: `
+            <strong>Typy snowboardov:</strong>
+            <ul>
+              <li>Freestyle - ľahké ovládanie a vhodné pre triky</li>
+              <li>Freeride - na jazdu mimo zjazdovky</li>
+              <li>All-mountain - univerzálne použitie</li>
+            </ul>
+            <strong>Podmienky prenájmu:</strong>
+            <ul>
+              <li>Minimálny vek: 14 rokov</li>
+              <li>Kaucia: 60 € (vratná pri vrátení v dobrom stave)</li>
+            </ul>
+            <strong>Tipy:</strong>
+            <ul>
+              <li>Vyberte si dĺžku snowboardu podľa vašej výšky a štýlu jazdy.</li>
+              <li>Skontrolujte správne nastavenie viazania pre pohodlnú jazdu.</li>
+            </ul>
+          `,
+        },
+        "Bežecké lyže": {
+          imgSrc: "images/gallerymain3.jpg",
+          text: `
+            <strong>Typy bežeckých lyží:</strong>
+            <ul>
+              <li>Klasické - na upravené trate</li>
+              <li>Korčuliarske - na dynamickú jazdu</li>
+              <li>Backcountry - na nerovný terén</li>
+            </ul>
+            <strong>Podmienky prenájmu:</strong>
+            <ul>
+              <li>Minimálny vek: 10 rokov</li>
+              <li>Kaucia: 40 € (vratná pri vrátení v dobrom stave)</li>
+            </ul>
+            <strong>Tipy:</strong>
+            <ul>
+              <li>Používajte správne vosky podľa podmienok trate.</li>
+              <li>Zvoľte dĺžku lyží o 20 cm dlhšiu ako vaša výška.</li>
+            </ul>
+          `,
+        },
+      };
+    
+      function showDetails(title) {
+        const detail = detailsData[title];
+        if (!detail) return;
+    
         document.getElementById("detail-title").textContent = title;
-        document.getElementById("detail-img").src = imgSrc;
-        document.getElementById("detail-text").textContent = text;    
-        // zobrazit
+        document.getElementById("detail-img").src = detail.imgSrc;
+        document.getElementById("detail-text").innerHTML = detail.text;
+    
         document.getElementById("detailed-card").style.display = "block";
         document.getElementById("overlay").style.display = "block";
+
+        document.body.style.overflow = "hidden";
       }
     
       function closeDetails() {
-        // skryt
         document.getElementById("detailed-card").style.display = "none";
         document.getElementById("overlay").style.display = "none";
+
+        document.body.style.overflow = "";
       }
     </script>
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
