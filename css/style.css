@@ -9,6 +9,12 @@ body {
     background-color: #1b2248;
 }
 
+@media (max-width: 800px) {
+    .logo {
+        width: 70%;
+    }
+}
+
 nav {
     background-color: #1b2248;
 }
